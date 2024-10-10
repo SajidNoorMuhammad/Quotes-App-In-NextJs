@@ -1,11 +1,19 @@
 import React from 'react'
 
-const page = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+export const metadata = {
+    title: "Quotes",
 }
 
-export default page
+const Quotes = async () => {
+
+    let quotes = await fetch('https://dummyjson.com/quotes');
+    quotes = await quotes.json();
+    console.log(quotes)
+
+    return (
+        <div>
+        </div>
+    )
+}
+
+export default Quotes;
